@@ -17,7 +17,8 @@ uploaded_file = st.file_uploader(
     label_visibility="visible",
     type=["xlsx"],
 )
-localTest = int(st.secrets["ISLOCALDEV"])
+localTest = st.secrets["ISLOCALDEV"] == "True"
+
 if uploaded_file:
     st.title("📘 Results")
 
