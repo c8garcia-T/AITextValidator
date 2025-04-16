@@ -50,7 +50,7 @@ if uploaded_file:
             )
         else:
             st.error(
-                f"**Word {rowIndex+1}:** {word}  \n**Response:** {cleanedResponse}"
+                f"**Word {rowIndex+1}:** {word}  \n**Response:** {cleanedResponse} \n**Original Definition:**{definition}"
             )
     df = pd.DataFrame.from_records(
         output,
